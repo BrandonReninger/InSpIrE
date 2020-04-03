@@ -14,6 +14,7 @@ function _drawTodos() {
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
+    TodoService.getTodos()
     store.subscribe("todos", _drawTodos)
   }
 

@@ -1,6 +1,6 @@
 export default class Todo {
     constructor(data) {
-        this.id = data.task_id
+        this.id = data._id
         this.task = data.task
         this.completed = data.completed
         this.description = data.description
@@ -8,6 +8,9 @@ export default class Todo {
 
     get Template() {
         return /*html*/ `
+        <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
+        <span>&times;</span>
+        </button>
         <dd>${this.description}</dd>
         `
     }
