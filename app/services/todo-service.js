@@ -1,4 +1,5 @@
 import store from "../store.js";
+import Todo from "../models/Todo.js";
 
 
 // @ts-ignore
@@ -20,8 +21,9 @@ class TodoService {
   addTodoAsync(newTodoObject) {
     todoApi.post("", newTodoObject)
       .then(res => {
-        console.log(res.data.data)
-      })
+        console.log("add todo", res.data)
+        this.getTodos()
+      }).catch(err => console.error(err))
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 

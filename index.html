@@ -18,11 +18,17 @@
 		The Quote
 	</div>
 
+
 	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
+		<h5># To do</h5>
+		<dl id="todos">
+			<!--todos here-->
+		</dl>
+		<form onsubmit=app.todoController.addTodo(event)>
+			<label for="description"></label>
+			<input type="text" name="description" placeholder="New Todo">
+			<button class="btn btn-sm bg-primary text-white" type="submit" id="button-addon2">+</button>
+		</form>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
