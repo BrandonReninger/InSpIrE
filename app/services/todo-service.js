@@ -1,15 +1,20 @@
 import store from "../store.js";
 
+
 // @ts-ignore
 const todoApi = axios.create({
-  baseURL: "https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/",
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/brandon/todos/",
   timeout: 8000
 });
 
+
+
 class TodoService {
   getTodos() {
-    console.log("Getting the Todo List");
-    todoApi.get();
+    todoApi.get()
+      .then(res => {
+        console.log(res.data)
+      }).catch(err => console.error(err))
     //TODO Handle this response from the server
   }
 
