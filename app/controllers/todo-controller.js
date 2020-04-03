@@ -12,11 +12,11 @@ export default class TodoController {
 
   addTodo(e) {
     e.preventDefault();
-    var form = e.target;
-    var todo = {
+    let formData = e.target;
+    let newTodoObject = {
       //TODO build the todo object from the data that comes into this method
     };
-    TodoService.addTodoAsync(todo);
+    TodoService.addTodoAsync(newTodoObject);
   }
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled

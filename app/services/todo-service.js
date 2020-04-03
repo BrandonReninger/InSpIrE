@@ -15,11 +15,13 @@ class TodoService {
       .then(res => {
         console.log(res.data)
       }).catch(err => console.error(err))
-    //TODO Handle this response from the server
   }
 
-  addTodoAsync(todo) {
-    todoApi.post("", todo);
+  addTodoAsync(newTodoObject) {
+    todoApi.post("", newTodoObject)
+      .then(res => {
+        console.log(res.data.data)
+      })
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 
