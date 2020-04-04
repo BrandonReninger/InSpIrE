@@ -19,21 +19,28 @@
 	</div>
 
 
-	<div>
-		<h5># To do</h5>
-		<dl id="todos">
-			<!--todos here-->
-		</dl>
-		<form onsubmit=app.todoController.addTodo(event)>
-			<label for="description"></label>
-			<input type="text" name="description" placeholder="New Todo">
-			<button class="btn btn-sm bg-primary text-white" type="submit" id="button-addon2">+</button>
-		</form>
-	</div>
-
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+				<h5># To do</h5>
+				<dl id="todos">
+					<!--todos here-->
+				</dl>
+				<form onsubmit=app.todoController.addTodo(event)>
+					<div class="input-group mb-3">
+						<label for="description"></label>
+						<input type="text" class="form-control" placeholder="Enter To do..." name="description">
+						<div class="input-group-append">
+							<button class="btn btn-sm bg-primary text-white" type="submit" id="button-addon2">+</button>
+						</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>
 
 </html>
-<html>

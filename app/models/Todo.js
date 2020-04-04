@@ -8,10 +8,13 @@ export default class Todo {
 
     get Template() {
         return /*html*/ `
-        <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
-        <span>&times;</span>
-        </button>
-        <dd>${this.description}</dd>
+    <dd>
+      <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
+      <span>&times;</span>
+      </button>
+      <input type="checkbox" aria-label="Checkbox for following text input">${this.description}<br>
+      <!--<h5 class= "bg-white shadow-sm text-center">${this.description}</h5>-->
+      </dd>
         `
     }
 
