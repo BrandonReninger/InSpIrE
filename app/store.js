@@ -6,7 +6,11 @@ let _state = {
   weather: new Weather({
     name: "loading",
     main: {
-      temp: 0.0
+      temp: 0.0,
+      humidity: 0.0
+    },
+    wind: {
+      speed: 0,
     }
   }), //temporary fake data
   /**@type {Todo[]}*/

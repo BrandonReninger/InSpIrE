@@ -11,6 +11,8 @@ function _drawTodos() {
   document.getElementById("todos").innerHTML = template
 }
 
+
+
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers

@@ -32,6 +32,15 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId)
+    if (todo) {
+      todo.completed = true;
+      todoApi.put(todoId, todo)
+        .then(res => {
+          console.log("toggle", res.data)
+          this.getTodos()
+        }).catch(err => console.error(err))
+    }
+
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
@@ -46,7 +55,8 @@ class TodoService {
         console.log("bye-bye", res.data)
         let myTodo = store.State.todos.findIndex(todo => todo.id == todoId)
         store.State.todos.splice(myTodo, 1)
-      })
+        this.getTodos()
+      }).catch(err => console.error(err))
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?

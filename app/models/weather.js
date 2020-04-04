@@ -10,5 +10,19 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.humidity = data.main.humidity
+    this.wind = data.wind.speed
   }
+
+  get Template() {
+    return /*html*/ `
+    <div class="col-3">
+    <h5>${this.city}</h5>
+    <p>Temp: ${this.kelvin}</p>
+    <p>RH: ${this.humidity}%</p>
+    <p>Wind: ${this.wind} mph</p>   
+    </div>
+    `
+  }
+
 }
