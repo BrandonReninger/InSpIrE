@@ -1,5 +1,6 @@
 import Weather from "./models/weather.js";
 import Todo from "./models/Todo.js";
+import Picture from "./models/Picture.js";
 
 let _state = {
   /**@type {Weather} */
@@ -12,9 +13,13 @@ let _state = {
     wind: {
       speed: 0,
     }
-  }), //temporary fake data
+  }),
   /**@type {Todo[]}*/
-  todos: [] //TODO change 'any' to your todo model
+  todos: [],
+  /**@type {Picture} */
+  picture: new Picture({
+    title: "blah"
+  })
 };
 
 /** Collection of listeners to be called based on keyed state changes
