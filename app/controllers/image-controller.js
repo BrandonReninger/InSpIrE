@@ -6,12 +6,13 @@ import store from "../store.js";
 //      (you may wish to set it as a background image)
 
 function _drawImage() {
-    document.getElementById("bg-image").innerHTML = store.State.picture.url
+    document.getElementById("bg-image").innerHTML = store.State.picture.Template
 }
 
 
 export default class ImageController {
     constructor() {
         store.subscribe('picture', _drawImage)
+        imageService.getPictures()
     }
 }

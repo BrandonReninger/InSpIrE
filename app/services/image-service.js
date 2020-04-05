@@ -11,7 +11,7 @@ const imgApi = axios.create({
 class ImageService {
 
   constructor() {
-    this.getPictures()
+
   }
 
   getPictures() {
