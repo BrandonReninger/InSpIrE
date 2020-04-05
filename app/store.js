@@ -16,18 +16,17 @@ let _state = {
   }),
   /**@type {Todo[]}*/
   todos: [],
-  /**@type {Picture} */
-  picture: new Picture({
-    title: "blah"
-  })
-};
+  picture: {}
+}
+
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
   weather: [],
-  todos: []
+  todos: [],
+  picture: []
 };
 
 /**

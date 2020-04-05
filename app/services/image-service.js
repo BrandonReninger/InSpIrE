@@ -9,10 +9,18 @@ const imgApi = axios.create({
 
 //TODO create methods to retrieve data trigger the update window when it is complete
 class ImageService {
+
+  constructor() {
+    this.getPictures()
+  }
+
   getPictures() {
     imgApi.get()
       .then(res => {
         console.log("image!", res.data)
+        let rawData = res.data
+        let picture = new Picture(rawData)
+        store.commit("picture", picture)
       }).catch(err => console.error(err))
   }
 }
