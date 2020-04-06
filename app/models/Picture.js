@@ -5,7 +5,7 @@ export default class Picture {
 
     get Template() {
         return /*html*/ `
-        <img src="${this.img}" class="h-100">
+        <img src="${this.img}" class="img-fluid m-0 h-100 w-100">
         `
     }
 

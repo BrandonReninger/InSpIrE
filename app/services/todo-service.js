@@ -32,14 +32,16 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId)
-    if (todo) {
-      todo.completed = true;
-      todoApi.put(todoId, todo)
-        .then(res => {
-          console.log("toggle", res.data)
-          this.getTodos()
-        }).catch(err => console.error(err))
+    if (todo.completed === false) {
+      todo.completed === true
+    } else if (todo.completed === true) {
+      todo.completed === false
     }
+    todoApi.put(todoId, todo)
+      .then(res => {
+        console.log("toggle", res.data)
+        this.getTodos()
+      }).catch(err => console.error(err))
 
     //TODO Make sure that you found a todo,
     //		and if you did find one

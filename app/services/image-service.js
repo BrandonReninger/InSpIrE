@@ -14,8 +14,8 @@ class ImageService {
 
   }
 
-  getPictures() {
-    imgApi.get()
+  async getPictures() {
+    return await imgApi.get()
       .then(res => {
         console.log("image!", res.data)
         let rawData = res.data

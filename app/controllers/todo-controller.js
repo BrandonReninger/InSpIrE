@@ -9,6 +9,8 @@ function _drawTodos() {
 
   myTodos.forEach(todo => template += todo.Template)
   document.getElementById("todos").innerHTML = template
+
+  document.getElementById("amount-todos").innerHTML = `<span>${store.State.todos.length} To do<span>`
 }
 
 
@@ -27,6 +29,7 @@ export default class TodoController {
       description: formData.description.value
     };
     TodoService.addTodoAsync(newTodoObject);
+    formData.reset();
   }
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled
