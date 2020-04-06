@@ -20,7 +20,7 @@ export default class Todo {
 
     get incompleteTemplate() {
         return /*html*/ `
-    <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
+        <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
       <span>&times;</span>
       </button>
       <input type="checkbox" name= "checked" onclick="app.todoController.toggleToDoStatus('${this.id}')" aria-label="Checkbox for following text input">${this.description}<br>
