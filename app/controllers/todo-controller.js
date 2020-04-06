@@ -7,9 +7,15 @@ function _drawTodos() {
   let template = ''
   let myTodos = store.State.todos
 
-  myTodos.forEach(todo => template += todo.Template)
-  document.getElementById("todos").innerHTML = template
+  myTodos.forEach(todo => {
+    if (todo.completed) {
+      template += todo.completeTemplate
+    } else {
+      template += todo.incompleteTemplate
+    }
+  })
 
+  document.getElementById("todos").innerHTML = template
   document.getElementById("amount-todos").innerHTML = `<span>${store.State.todos.length} To do<span>`
 }
 

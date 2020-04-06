@@ -6,13 +6,24 @@ export default class Todo {
         this.description = data.description
     }
 
-    get Template() {
+    get completeTemplate() {
         return /*html*/ `
     <dd>
       <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
       <span>&times;</span>
       </button>
-      <input type="checkbox" onclick="app.todoController.toggleToDoStatus('${this.id}')" aria-label="Checkbox for following text input">${this.description}<br>
+      <input type="checkbox" name= "checked" checked onclick="app.todoController.toggleToDoStatus('${this.id}')" aria-label="Checkbox for following text input">${this.description}<br>
+      <!--<h5 class= "bg-white shadow-sm text-center">${this.description}</h5>-->
+      </dd>
+        `
+    }
+
+    get incompleteTemplate() {
+        return /*html*/ `
+        <button type="button" class="close text-danger" onclick="app.todoController.removeTodo('${this.id}')">
+      <span>&times;</span>
+      </button>
+      <input type="checkbox" name= "checked" onclick="app.todoController.toggleToDoStatus('${this.id}')" aria-label="Checkbox for following text input">${this.description}<br>
       <!--<h5 class= "bg-white shadow-sm text-center">${this.description}</h5>-->
       </dd>
         `
