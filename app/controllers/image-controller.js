@@ -6,7 +6,7 @@ import store from "../store.js";
 //      (you may wish to set it as a background image)
 
 function _drawImage() {
-    document.getElementById("bg-image").innerHTML = store.State.picture.Template
+    document.body.style.backgroundImage = `url('${store.State.picture.img}')`
 }
 
 

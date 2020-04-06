@@ -34,9 +34,9 @@ class TodoService {
     let todo = store.State.todos.find(todo => todo.id == todoId)
 
     if (todo.completed === false) {
-      todo.completed === true
+      todo.completed = true
     } else if (todo.completed === true) {
-      todo.completed === false
+      todo.completed = false
     }
     todoApi.put(todoId, todo)
       .then(res => {

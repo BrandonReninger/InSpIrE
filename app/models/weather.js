@@ -10,6 +10,7 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.fahrenheit = (data.main.temp - 273.15) * 9 / 5 + 32
     this.humidity = data.main.humidity
     this.wind = data.wind.speed
   }
@@ -19,6 +20,7 @@ export default class Weather {
     <div class="col-4">
     <h5>${this.city}</h5>
     <small>Temp: ${this.kelvin}</small>
+    <small>Temp: ${this.fahrenheit}</small>
     <small>RH: ${this.humidity}%</small>
     <small>Wind: ${this.wind} mph</small>   
     </div>
