@@ -11,21 +11,20 @@
 
 <body>
 
+
 	<main class="container-fluid">
-		<div id="bg-image" style="background-size: cover"></div>
-		<div class="row justify-content-end" id="weather">
+		<div id="bg-image"></div>
+		<div class="row border border-rounded" id="weather">
 			<!--weather data here-->
 		</div>
-		</div>
-
 
 		<div class="row">
-			<div class="col-3">
-				<h5 id="amount-todos"> To do</h5>
+			<div class="col-3 border border-rounded">
+				<h5 class="text-center" id="amount-todos"> To do</h5>
 				<dl id="todos">
 					<!--todos here-->
 				</dl>
-				<form onsubmit=app.todoController.addTodo(event)>
+				<form onsubmit="app.todoController.addTodo(event)">
 					<div class="input-group mb-3">
 						<label for="description"></label>
 						<input type="text" class="form-control" placeholder="Enter To do..." name="description">
@@ -37,7 +36,7 @@
 		</div>
 
 
-		<div class="row justify-content-end" id="quote"></div>
+		<div class="row" id="quote"></div>
 
 		</div>
 	</main>
