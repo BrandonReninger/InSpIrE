@@ -16,11 +16,11 @@ export default class Weather {
 
   get Template() {
     return /*html*/ `
-    <div class="col-3">
+    <div class="col-4">
     <h5>${this.city}</h5>
-    <p>Temp: ${this.kelvin}</p>
-    <p>RH: ${this.humidity}%</p>
-    <p>Wind: ${this.wind} mph</p>   
+    <small>Temp: ${this.kelvin}</small>
+    <small>RH: ${this.humidity}%</small>
+    <small>Wind: ${this.wind} mph</small>   
     </div>
     `
   }

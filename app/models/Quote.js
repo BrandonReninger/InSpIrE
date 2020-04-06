@@ -6,7 +6,7 @@ export default class Quote {
 
     get Template() {
         return /*html*/ `
-        <div class="col-5 m-0">
+        <div class="col-5 border border-rounded m-0">
         <p>${this.quote}</p>
         <p>- ${this.author}</p>
         </div>
